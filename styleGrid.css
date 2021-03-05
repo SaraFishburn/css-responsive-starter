@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article > * {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: black;
+}
+
+nav {
+  background-color: #5995DA;
+  height: 80px;
+}
+
+header {
+  background-color: #B2D6FF;
+}
+
+main {
+  background-color: #EAEDF0;
+  height: 600px;
+}
+
+#sign-up {
+  background-color: #D6E9FE;
+}
+
+#feature-1 {
+  background-color: #F5CF8E;
+}
+
+#feature-2 {
+  background-color: #F09A9D;
+}
+
+#feature-3 {
+  background-color: #C8C6FA;
+}
+
+/* tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'nav nav'
+                         'header header'
+                         'content content'
+                         'sign-up feature-1'
+                         'feature-2 feature-3';
+  }
+
+  nav {
+    grid-area: nav;
+  }
+  
+  header {
+    grid-area: header;
+  }
+  
+  main {
+    grid-area: content;
+  }
+  
+  #sign-up {
+    grid-area: sign-up;
+  }
+  
+  #feature-1 {
+    grid-area: feature-1;
+  }
+  
+  #feature-2 {
+    grid-area: feature-2;
+  }
+  
+  #feature-3 {
+    grid-area: feature-3;
+  }
+
+}
+
+/* desktop */
+@media only screen and (min-width: 961px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'nav nav nav'
+                         'header header header'
+                         'feature-1 feature-2 feature-3'
+                         'sign-up sign-up sign-up'
+                         'content content content';
+  }
+
+  nav {
+    grid-area: nav;
+  }
+  
+  header {
+    grid-area: header;
+  }
+  
+  main {
+    grid-area: content;
+  }
+  
+  #sign-up {
+    grid-area: sign-up;
+  }
+  
+  #feature-1 {
+    grid-area: feature-1;
+  }
+  
+  #feature-2 {
+    grid-area: feature-2;
+  }
+  
+  #feature-3 {
+    grid-area: feature-3;
+  }
+}
+
